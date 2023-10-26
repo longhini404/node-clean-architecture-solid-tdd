@@ -56,7 +56,7 @@ describe('UpdateProductController', () => {
     await sut.handle(request)
     expect(updateProductSpy).toHaveBeenCalledWith({
       product_id: request.params.product_id,
-      product: request.body,
+      information_to_update: request.body,
     })
   })
 
