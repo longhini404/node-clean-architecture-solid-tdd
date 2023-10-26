@@ -15,7 +15,7 @@ export default {
   },
   servers: [
     {
-      url: 'http://localhost:8008',
+      url: 'http://localhost:8000',
       description: 'Developer server',
     },
   ],
