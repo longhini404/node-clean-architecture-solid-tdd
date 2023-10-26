@@ -26,5 +26,5 @@ export default (router: Router): void => {
     authentication(),
     adaptRoute(makeUpdateProductController())
   )
-  router.post('/product/create', adaptRoute(makeCreateProductController()))
+  router.post('/product/create', authentication(), adaptRoute(makeCreateProductController()))
 }
