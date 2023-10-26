@@ -1,4 +1,4 @@
-export const loadUserResultSchema = {
+export const loadUserByIdResultSchema = {
   type: 'object',
   properties: {
     id: {

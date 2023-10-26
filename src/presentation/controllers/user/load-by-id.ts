@@ -1,4 +1,4 @@
-import { LoadUser } from '@/domain/usecases/user'
+import { LoadUserById } from '@/domain/usecases/user'
 import { badRequest, success } from '@/presentation/helpers'
 import { Controller, HttpRequest, HttpResponse, Validation } from '@/presentation/protocols'
 
@@ -6,8 +6,8 @@ type HttpParams = {
   user_id: number
 }
 
-export class LoadUserController implements Controller {
-  constructor(private readonly validation: Validation, private readonly loadUser: LoadUser) {}
+export class LoadUserByIdController implements Controller {
+  constructor(private readonly validation: Validation, private readonly loadUser: LoadUserById) {}
 
   async handle(httpRequest: HttpRequest<HttpParams>): Promise<HttpResponse> {
     const error = this.validation.validate(httpRequest.params)

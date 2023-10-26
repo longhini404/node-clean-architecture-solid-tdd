@@ -1,3 +1,5 @@
+import { createUserParamsSchema } from '@/main/docs/schemas/index'
+
 export const createUserPath = {
   post: {
     security: [
@@ -10,9 +12,7 @@ export const createUserPath = {
     requestBody: {
       content: {
         'application/json': {
-          schema: {
-            $ref: '#/schemas/createUserParams',
-          },
+          schema: createUserParamsSchema,
         },
       },
     },

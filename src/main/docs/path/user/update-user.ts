@@ -1,3 +1,5 @@
+import { updateUserParamsSchema } from '@/main/docs/schemas/index'
+
 export const updateUserPath = {
   patch: {
     security: [
@@ -10,9 +12,7 @@ export const updateUserPath = {
     requestBody: {
       content: {
         'application/json': {
-          schema: {
-            $ref: '#/schemas/updateUserParams',
-          },
+          schema: updateUserParamsSchema,
         },
       },
     },

@@ -1,10 +1,10 @@
 import { User } from '@/domain/entities'
 
-export interface LoadUser {
-  load: (params: LoadUser.Params) => Promise<LoadUser.Result>
+export interface LoadUserById {
+  load: (params: LoadUserById.Params) => Promise<LoadUserById.Result>
 }
 
-export namespace LoadUser {
+export namespace LoadUserById {
   export type Params = {
     user_id: number
   }

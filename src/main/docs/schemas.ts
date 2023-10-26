@@ -1,21 +1,21 @@
 import {
-  errorSchema,
-  loginResultSchema,
-  loginParamsSchema,
   createUserParamsSchema,
   createUserResultSchema,
-  updateUserParamsSchema,
+  errorSchema,
   listUsersResultSchema,
-  loadUserResultSchema,
+  loadUserByIdResultSchema,
+  loginParamsSchema,
+  loginResultSchema,
+  updateUserParamsSchema,
 } from './schemas/index'
 
 export default {
-  error: errorSchema,
-  loginParams: loginParamsSchema,
-  loginResult: loginResultSchema,
   createUserParams: createUserParamsSchema,
   createUserResult: createUserResultSchema,
-  updateUserParams: updateUserParamsSchema,
+  error: errorSchema,
   listUsersSchema: listUsersResultSchema,
-  loadUserSchema: loadUserResultSchema,
+  loadUserByIdSchema: loadUserByIdResultSchema,
+  loginParams: loginParamsSchema,
+  loginResult: loginResultSchema,
+  updateUserParams: updateUserParamsSchema,
 }

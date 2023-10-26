@@ -1,5 +1,5 @@
 export * from './create'
-export * from './update'
 export * from './delete'
 export * from './list'
-export * from './load'
+export * from './load-by-id'
+export * from './update'

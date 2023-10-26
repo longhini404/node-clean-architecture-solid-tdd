@@ -1,11 +1,11 @@
-import { LoadUser } from '@/domain/usecases/user'
+import { LoadUserById } from '@/domain/usecases/user'
 import { LoadUserByIdRepository } from '@/data/protocols/repository/user'
 import { UserNotFoundError } from '@/domain/errors/user'
 
-export class LoadUserService implements LoadUser {
+export class LoadUserByIdService implements LoadUserById {
   constructor(private readonly loadUserByIdRepository: LoadUserByIdRepository) {}
 
-  async load({ user_id }: LoadUser.Params): Promise<LoadUser.Result> {
+  async load({ user_id }: LoadUserById.Params): Promise<LoadUserById.Result> {
     const user = await this.loadUserByIdRepository.loadById({ id: user_id })
     if (!user) {
       throw new UserNotFoundError()

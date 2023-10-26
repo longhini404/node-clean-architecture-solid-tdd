@@ -1,4 +1,4 @@
-import { CreateUser, DeleteUser, ListUsers, LoadUser, UpdateUser } from '@/domain/usecases/user'
+import { CreateUser, DeleteUser, ListUsers, LoadUserById, UpdateUser } from '@/domain/usecases/user'
 
 const fakeUser = {
   name: 'any_name',
@@ -42,10 +42,10 @@ export class ListUsersStub implements ListUsers {
   }
 }
 
-export class LoadUserStub implements LoadUser {
+export class LoadUserByIdStub implements LoadUserById {
   result = fakeUser
 
-  async load(params: LoadUser.Params): Promise<LoadUser.Result> {
+  async load(params: LoadUserById.Params): Promise<LoadUserById.Result> {
     return this.result
   }
 }

@@ -1,6 +1,2 @@
 export * from './login'
-export * from './create-user'
-export * from './update-user'
-export * from './delete-user'
-export * from './list-users'
-export * from './load-user'
+export * from './user/index'

@@ -1,20 +1,20 @@
 import { MissingParamError } from '@/domain/errors/generic'
 import { HttpRequest } from '@/presentation/protocols'
 import { badRequest, success } from '@/presentation/helpers'
-import { LoadUserController } from '@/presentation/controllers/user'
+import { LoadUserByIdController } from '@/presentation/controllers/user'
 import { ValidationStub } from '@/tests/validation/mocks'
-import { LoadUserStub } from '@/tests/presentation/mocks'
+import { LoadUserByIdStub } from '@/tests/presentation/mocks'
 
 interface SutTypes {
-  sut: LoadUserController
+  sut: LoadUserByIdController
   validationStub: ValidationStub
-  loadUserStub: LoadUserStub
+  loadUserStub: LoadUserByIdStub
 }
 
 const makeSut = (): SutTypes => {
   const validationStub = new ValidationStub()
-  const loadUserStub = new LoadUserStub()
-  const sut = new LoadUserController(validationStub, loadUserStub)
+  const loadUserStub = new LoadUserByIdStub()
+  const sut = new LoadUserByIdController(validationStub, loadUserStub)
   return {
     sut,
     validationStub,
@@ -28,7 +28,7 @@ const makeFakeRequest = (): HttpRequest => ({
   },
 })
 
-describe('LoadUserController', () => {
+describe('LoadUserByIdController', () => {
   it('Should return error if validation throws', async () => {
     const { sut, validationStub } = makeSut()
     const error = new MissingParamError('wrong_field')

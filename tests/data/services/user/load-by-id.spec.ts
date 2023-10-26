@@ -1,15 +1,15 @@
-import { LoadUserService } from '@/data/services/user'
+import { LoadUserByIdService } from '@/data/services/user'
 import { UserNotFoundError } from '@/domain/errors/user'
 import { LoadUserByIdRepositoryStub } from '@/tests/data/mocks'
 
 interface SutTypes {
-  sut: LoadUserService
+  sut: LoadUserByIdService
   loadUserByIdRepositoryStub: LoadUserByIdRepositoryStub
 }
 
 const makeSut = (): SutTypes => {
   const loadUserByIdRepositoryStub = new LoadUserByIdRepositoryStub()
-  const sut = new LoadUserService(loadUserByIdRepositoryStub)
+  const sut = new LoadUserByIdService(loadUserByIdRepositoryStub)
   return {
     sut,
     loadUserByIdRepositoryStub,

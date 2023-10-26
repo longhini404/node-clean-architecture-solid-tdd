@@ -1,36 +1,30 @@
-export const listUsersPath = {
+import { loadUserByIdResultSchema } from '@/main/docs/schemas/index'
+
+export const loadUserByIdPath = {
   get: {
     security: [
       {
         authToken: [],
       },
     ],
+    tags: ['User'],
+    summary: 'API to load a user in the system',
     parameters: [
       {
-        in: 'query',
-        name: 'page',
+        in: 'path',
+        name: 'user_id',
+        required: true,
         schema: {
-          type: 'string',
-        },
-      },
-      {
-        in: 'query',
-        name: 'items',
-        schema: {
-          type: 'string',
+          type: 'number',
         },
       },
     ],
-    tags: ['User'],
-    summary: 'API to list users in the system',
     responses: {
       200: {
         description: 'Success',
         content: {
           'application/json': {
-            schema: {
-              $ref: '#/schemas/listUsersResult',
-            },
+            schema: loadUserByIdResultSchema,
           },
         },
       },

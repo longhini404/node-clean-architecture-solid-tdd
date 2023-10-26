@@ -1,5 +1,5 @@
 export * from './create-user'
 export * from './delete-user'
+export * from './list-users'
 export * from './load-user-by-id'
-export * from './login'
 export * from './update-user'
