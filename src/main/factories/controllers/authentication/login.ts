@@ -4,7 +4,7 @@ import { LoginController } from '@/presentation/controllers/authentication'
 import { JwtAdapter, BcryptAdapter } from '@/infra/lib/cryptography'
 import { PostgresUserRepository } from '@/infra/db/postgres/repositories'
 import config from '@/main/config/env'
-import { makeLoginValidation } from '@/main/factories/validation'
+import { makeLoginValidation } from '@/main/factories/validation/index'
 import { makePerformanceMonitorDecorator } from '@/main/factories/decorators'
 
 export const makeLoginController = (): Controller => {

@@ -1,7 +1,7 @@
 import { Controller } from '@/presentation/protocols'
 import { LoadUserByIdController } from '@/presentation/controllers/user'
 import { PostgresUserRepository } from '@/infra/db/postgres/repositories'
-import { makeLoadUserByIdValidation } from '@/main/factories/validation'
+import { makeLoadUserByIdValidation } from '@/main/factories/validation/index'
 import { makePerformanceMonitorDecorator } from '@/main/factories/decorators'
 import { LoadUserByIdService } from '@/data/services/user'
 

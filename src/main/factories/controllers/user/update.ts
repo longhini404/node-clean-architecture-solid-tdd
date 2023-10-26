@@ -1,7 +1,7 @@
 import { Controller } from '@/presentation/protocols'
 import { UpdateUserController } from '@/presentation/controllers/user'
 import { PostgresUserRepository } from '@/infra/db/postgres/repositories'
-import { makeUpdateUserValidation } from '@/main/factories/validation'
+import { makeUpdateUserValidation } from '@/main/factories/validation/index'
 import { makePerformanceMonitorDecorator } from '@/main/factories/decorators'
 import { UpdateUserService } from '@/data/services/user'
 
