@@ -14,7 +14,7 @@ export class CreateProductService implements CreateProduct {
   async create(params: CreateProduct.Params): Promise<CreateProduct.Result> {
     const { title, description, price, discountPercentage, rating, stock, brand, category } = params
 
-    const productFound = await this.loadProductByTitleRepository.loadByTitle({ title }) // Alterado para loadByTitle
+    const productFound = await this.loadProductByTitleRepository.loadByTitle({ title })
     if (productFound) {
       return Promise.reject(new ProductAlreadyRegisteredError())
     }

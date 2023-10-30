@@ -1,5 +1,5 @@
 import { Validation } from '@/presentation/protocols'
-import { makeUpdateProductController } from '@/main/factories/controllers/product' // Importe o controller de atualização de produtos, se existir
+import { makeUpdateProductController } from '@/main/factories/controllers/product'
 import { RequiredFieldValidation, ValidationComposite } from '@/validation/validators'
 
 jest.mock('@/validation/validators/validation-composite')
