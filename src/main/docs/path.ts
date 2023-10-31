@@ -22,8 +22,8 @@ export default {
   '/api/user/update/{user_id}': updateUserPath,
 
   '/api/product/create': createProductPath,
-  '/api/product/delete/{user_id}': deleteProductPath,
+  '/api/product/delete/{product_id}': deleteProductPath,
   '/api/product/load': listProductsPath,
-  '/api/product/load/{user_id}': loadProductByIdPath,
-  '/api/product/update/{user_id}': updateProductPath,
+  '/api/product/load/{product_id}': loadProductByIdPath,
+  '/api/product/update/{product_id}': updateProductPath,
 }
